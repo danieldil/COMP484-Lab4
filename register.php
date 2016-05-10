@@ -6,9 +6,10 @@
             $password = $_POST['password'];
             echo "level 1";
             if($_POST['password']==$_POST['password_again']){
-                $query = "INSERT INTO `users` VALUES('','".mysql_real_escape_string($username)."','".mysql_real_escape_string($password).")";
+                $query = "INSERT INTO `users` (`username`, `password`) VALUES('".mysql_real_escape_string($username)."','".mysql_real_escape_string($password)."')";
+                //$query = "INSERT INTO `484lab4`.`users` (`id`, `username`, `password`) VALUES (NULL, 'poop', '');";
                 echo "level 2";
-                if($query_run = mysql_query($query)){
+                if($query_run = mysql_query($query,$database)){
                     echo "level 3";
 						header('Location: mailer.php');
 					}

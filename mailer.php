@@ -7,4 +7,19 @@
     echo "please login";
 
 ?>
+    <form>
+        <br>
+        To: 
+        <br>
+        <input type="name">
+        <br>
+        Body:
+        <br>
+        <textarea>
+        
+        </textarea>
+        When to send:
+        <br>
+        
+    </form>
 </html>
